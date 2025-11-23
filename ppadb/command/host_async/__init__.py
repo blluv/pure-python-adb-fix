@@ -13,7 +13,7 @@ class HostAsync:
             await conn.send(cmd)
             return await conn.receive()
 
-    async def devices(self):
+    async def devices(self) -> list[DeviceAsync]:
         cmd = "host:devices"
         result = await self._execute_cmd(cmd)
 

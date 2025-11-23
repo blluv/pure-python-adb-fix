@@ -18,7 +18,7 @@ class Host(Command):
             else:
                 conn.check_status()
 
-    def devices(self, state=None):
+    def devices(self, state=None) -> list[Device]:
         cmd = "host:devices"
         result = self._execute_cmd(cmd)
 
